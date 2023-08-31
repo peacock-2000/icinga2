@@ -25,7 +25,7 @@ set(remote_SOURCES
   endpoint.cpp endpoint.hpp endpoint-ti.hpp
   eventqueue.cpp eventqueue.hpp
   eventshandler.cpp eventshandler.hpp
-  filterutility.cpp filterutility.hpp
+  filterutility.cpp filterutility-targeted.cpp filterutility.hpp
   httphandler.cpp httphandler.hpp
   httpserverconnection.cpp httpserverconnection.hpp
   httputility.cpp httputility.hpp

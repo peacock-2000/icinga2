@@ -9,6 +9,7 @@
 #include "base/dictionary.hpp"
 #include "base/configobject.hpp"
 #include <set>
+#include <utility>
 
 namespace icinga
 {
@@ -57,6 +58,15 @@ public:
 		const ApiUser::Ptr& user, const String& variableName = String());
 	static bool EvaluateFilter(ScriptFrame& frame, Expression *filter,
 		const Object::Ptr& target, const String& variableName = String());
+
+private:
+	static bool GetTargetServices(Expression* filter, const Dictionary::Ptr& constants, std::vector<std::pair<const String *, const String *>>& out);
+	static std::pair<const String *, const String *> GetTargetService(Expression* filter, const Dictionary::Ptr& constants);
+	static bool GetTargetHosts(Expression* filter, const Dictionary::Ptr& constants, std::vector<const String *>& out);
+	static const String * GetComparedName(Expression* filter, const char * lcType, const Dictionary::Ptr& constants);
+	static bool IsNameIndexer(Expression* exp, const char * lcType, const Dictionary::Ptr& constants);
+	static const String * GetConstString(Expression* exp, const Dictionary::Ptr& constants);
+	static const Value * GetConst(Expression* exp, const Dictionary::Ptr& constants);
 };
 
 }
