@@ -200,7 +200,7 @@ zypper ar https://download.opensuse.org/repositories/server:/monitoring/15.3/ser
 <!-- {% endif %} -->
 
 <!-- {% if amazon_linux %} -->
-### Amazon Linux 2 Repository <a id="amazon-linux-2-repository"></a>
+### Amazon Linux Repository <a id="amazon-linux-2-repository"></a>
 
 !!! info
 
@@ -307,7 +307,7 @@ zypper install icinga2
 
 <!-- {% if amazon_linux %} -->
 <!-- {% if not icingaDocs %} -->
-#### Amazon Linux 2
+#### Amazon Linux
 <!-- {% endif %} -->
 ```bash
 yum install icinga2
@@ -418,7 +418,7 @@ zypper install --recommends monitoring-plugins-all
 
 <!-- {% if amazon_linux %} -->
 <!-- {% if not icingaDocs %} -->
-#### Amazon Linux 2
+#### Amazon Linux
 <!-- {% endif %} -->
 The packages for Amazon Linux 2 depend on other packages which are distributed as part of the EPEL repository.
 
@@ -505,7 +505,7 @@ Use your distribution's package manager to install the `icingadb-redis` package 
 
 <!-- {% if amazon_linux %} -->
 <!-- {% if not icingaDocs %} -->
-##### Amazon Linux 2
+##### Amazon Linux
 <!-- {% endif %} -->
 ```bash
 yum install icingadb-redis
